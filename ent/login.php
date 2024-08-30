@@ -20,8 +20,8 @@
 
                 ?>
                 <div class="form-body">
-                    <label for="nama">Nama</label>
-                    <input type="text" name="nama">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
                 </div>
                 <div class="form-body">
                     <label for="password">Password</label>

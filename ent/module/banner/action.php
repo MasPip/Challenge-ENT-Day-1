@@ -19,18 +19,30 @@
     }
 
     if($button == "Add"){
-        $statement = $koneksi->prepare("INSERT INTO banner (judul, gambar) VALUES (?,?);");
-        $statement->bind_param('ss', $judul, $nama_file);
-        $statement->execute();
+        if(empty($judul) || empty($nama_file)){
+            echo "<script>alert('Mohon isi semua data yang diperlukan!');</script>";
+            echo "<script>window.location.href = '".BASE_URL."index.php?page=my_profile&module=banner&action=form';</script>";
+        } else {
+            $statement = $koneksi->prepare("INSERT INTO banner (judul, gambar) VALUES (?,?);");
+            $statement->bind_param('ss', $judul, $nama_file);
+            $statement->execute();
+            echo "<script>alert('Data berhasil ditambahkan!');</script>";
+            echo "<script>window.location.href = '".BASE_URL."index.php?page=my_profile&module=banner&action=list';</script>";
+        }
     }
     else if($button == "Update"){
-        mysqli_query($koneksi, "UPDATE banner SET judul='$judul' $update_gambar WHERE banner_id='$banner_id'");
-        
+        if(empty($judul)){
+            echo "<script>alert('Mohon isi semua data yang diperlukan!');</script>";
+            echo "<script>window.location.href = '".BASE_URL."index.php?page=my_profile&module=banner&action=form&banner_id=$banner_id';</script>";
+        } else {
+            mysqli_query($koneksi, "UPDATE banner SET judul='$judul' $update_gambar WHERE banner_id='$banner_id'");
+            echo "<script>alert('Data berhasil diupdate!');</script>";
+            echo "<script>window.location.href = '".BASE_URL."index.php?page=my_profile&module=banner&action=list';</script>";
+        }
     }
     else if($button == "Delete"){
         mysqli_query($koneksi, "DELETE FROM banner WHERE banner_id = '$banner_id'");
+        echo "<script>alert('Data berhasil dihapus!');</script>";
+        echo "<script>window.location.href = '".BASE_URL."index.php?page=my_profile&module=banner&action=list';</script>";
     }
-    
-    header("location: ". BASE_URL."index.php?page=my_profile&module=banner&action=list");
-
 ?>

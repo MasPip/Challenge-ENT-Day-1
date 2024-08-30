@@ -32,7 +32,7 @@
         echo '<div class="carousel-item">';
       }
       echo '<img src="' . BASE_URL . 'img/banner/' . $row['gambar'] . '" class="d-block w-100 img-fluid banner">';
-      echo '<div class="carousel-caption d-none d-md-block">' . $row['judul'] . '</div>';
+      echo '<div class="carousel-caption d-none d-md-block judul-carousel">' . $row['judul'] . '</div>';
       echo '</div>';
       $i++;
     }
@@ -63,7 +63,6 @@
                     <img src='".BASE_URL."img/berita/$row[gambar]' class='img-fluid wisata' >
                     <div class='card-body'>
                         <h5 class='card-title'>$row[judul]</h5>
-                        <p class='card-text'>$row[kategori]</p>
                         <a href='".BASE_URL."index.php?page=detail&berita_id=$row[berita_id]' class='btn btn-primary'>Read More</a>
                     </div>
                 </div>";

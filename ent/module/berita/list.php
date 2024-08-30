@@ -30,18 +30,17 @@
         $no = 1;
 
         while($row = mysqli_fetch_assoc($queryBerita)){
-
-        echo "<tr>
-        <th scope='row'>$no</th>
-        <td>$row[judul]</td>
-        <td><img class='img-fluid wisata' src='".BASE_URL."img/berita/$row[gambar]'></td>
-        <td>
-        <a class='btn btn-primary' href='".BASE_URL."index.php?page=my_profile&module=berita&action=form&berita_id=$row[berita_id]'>Edit</a>
-        <a class='btn btn-danger' href='".BASE_URL."module/berita/action.php?button=Delete&berita_id=$row[berita_id]'>Delete</a>
-        </td>
-        </tr>";
-
-        $no++;
+            echo "<tr>
+            <th scope='row'>$no</th>
+            <td style='font-size: 18px;'><b>$row[judul]</b></td>
+            <td><img class='img-fluid wisata' src='".BASE_URL."img/berita/$row[gambar]'></td>
+            <td>
+            <a class='btn btn-primary' href='".BASE_URL."index.php?page=my_profile&module=berita&action=form&berita_id=$row[berita_id]'>Edit</a>
+            <a class='btn btn-danger' href='".BASE_URL."module/berita/action.php?button=Delete&berita_id=$row[berita_id]'>Delete</a>
+            </td>
+            </tr>";
+    
+            $no++;
         }
         echo "</table>";
     

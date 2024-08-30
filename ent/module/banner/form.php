@@ -18,16 +18,20 @@
     }
 ?>
 
-<form action="<?php echo BASE_URL . "module/banner/action.php?banner_id=$banner_id" ?>" method="post" enctype="multipart/form-data">
-
-
-    <div class="form-body">
-        <label for="judul">Judul</label>
-        <input type="text" name="judul" value="<?php echo $judul; ?>">
-    </div>
-    <div class="form-body">
-        <label for="file">Gambar</label>
-        <input type="file" name="file"><?php echo $gambar ?>
-    </div>
-    <input class="btn btn-primary my-2" type="submit" name="button" value="<?php echo $button;?>">
-</form>
+<div class="container">
+    <h2>Form Banner</h2>
+    <form action="<?php echo BASE_URL . "module/banner/action.php?banner_id=$banner_id" ?>" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="judul">Judul</label>
+            <input type="text" name="judul" value="<?php echo $judul; ?>" class="form-control" placeholder="Masukkan judul banner">
+        </div>
+        <div class="form-group">
+            <label for="file">Gambar</label>
+            <input type="file" name="file" class="form-control-file">
+            <?php if($gambar) : ?>
+                <img src="<?php echo BASE_URL . "img/banner/$gambar"; ?>" alt="Gambar Banner" class="img-thumbnail">
+            <?php endif; ?>
+        </div>
+        <button type="submit" name="button" value="<?php echo $button; ?>" class="btn btn-primary">Simpan</button>
+    </form>
+</div>

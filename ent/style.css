@@ -99,7 +99,7 @@ footer {
     font-size: 30px;
 }
 
-.page-detail .gambar-wisata {
+.page-detail .gambar-berita {
     width: 350px;
 }
 
@@ -131,3 +131,17 @@ img.banner {
 .follow {
     margin-left: 20px;
 }
+
+.carousel-caption {
+    font-size: 40px;
+}
+
+.judul-berita {
+    align-items: center;
+}
+  
+.gambar-berita img {
+    max-width: 100%;
+    height: auto;
+}
+

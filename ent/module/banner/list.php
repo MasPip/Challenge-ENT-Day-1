@@ -29,18 +29,17 @@
         $no = 1;
 
         while($row = mysqli_fetch_assoc($queryBanner)){
-
-        echo "<tr>
-        <th scope='row'>$no</th>
-        <td>$row[judul]</td>
-        <td><img class='img-fluid wisata' src='".BASE_URL."img/banner/$row[gambar]'></td>
-        <td>
-        <a class='btn btn-primary' href='".BASE_URL."index.php?page=my_profile&module=banner&action=form&banner_id=$row[banner_id]'>Edit</a>
-        <a class='btn btn-danger' href='".BASE_URL."module/banner/action.php?button=Delete&banner_id=$row[banner_id]'>Delete</a>
-        </td>
-        </tr>";
-
-        $no++;
+            echo "<tr>
+            <th scope='row'>$no</th>
+            <td style='font-size: 18px;'><b>$row[judul]</b></td>
+            <td><img class='img-fluid wisata' src='".BASE_URL."img/banner/$row[gambar]'></td>
+            <td>
+            <a class='btn btn-primary' href='".BASE_URL."index.php?page=my_profile&module=banner&action=form&banner_id=$row[banner_id]'>Edit</a>
+            <a class='btn btn-danger' href='".BASE_URL."module/banner/action.php?button=Delete&banner_id=$row[banner_id]'>Delete</a>
+            </td>
+            </tr>";
+    
+            $no++;
         }
         echo "</table>";
     

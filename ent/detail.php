@@ -9,22 +9,26 @@
             
                 echo "<div class='col-md-12 page-detail'>
                     
-                    <div class='row d-flex justify-content-between'>
-                        <div class='nama '>
-                            <p>$row[judul]</p>
+                    
+                    <div class='row justify-content-center'>
+                        <div class='col-md-12'>
+                            <h1 class='text-center' style='font-size: 50px;'>$row[judul]</h1>
                         </div>
-                        <div class='gambar-wisata'>
-                            <img class='img-fluid' src='".BASE_URL."img/berita/$row[gambar]'>
+                    </div>
+                    <div class='row justify-content-center'>
+                        <div class='col-md-6'>
+                            <img class='img-fluid isi-berita' src='".BASE_URL."img/berita/$row[gambar]'>
                         </div>
-                        <div class='isi'>
-                            <p>$row[isi]</p>
+                    </div>
+                    <div class='row justify-content-center'>
+                        <div class='col-md-12'>
+                            <p class='text-justify' style='font-size: 20px;'>$row[isi]</p>
                         </div>
                     </div>
                 </div>";
             ?>
 
         </div>
-        <a class="return" href="<?php echo BASE_URL."index.php";?>">Home</a>
+        <a class="btn btn-primary return" href="<?php echo BASE_URL."index.php";?>">Home</a>
     </div>
 </section>
-

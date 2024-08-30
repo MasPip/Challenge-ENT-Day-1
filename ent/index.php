@@ -42,7 +42,8 @@
 
                     if($user_id){
                         echo "<li class='nav-item nav-link'>Hi, $nama</li>";
-                        echo "<li class='nav-item'><a class='nav-link active' href='index.php?page=my_profile&module=berita&action=list'>My Profile</a></li>";
+                        echo "<li class='nav-item'><a class='nav-link active' href='index.php?page=my_profile&module=berita&action=list'>Dashboard</a></li>";
+                        echo "<li class='nav-item'><a class='nav-link ' href='index.php?page=profile_user'>Profile User</a></li>";
                         echo "<li class='nav-item'><a class='nav-link' href='logout.php'>Logout</a></li>";
                     }
                     else{
