@@ -1,2 +1,2 @@
-# Challenge-ENT-Day-1
-Challenge ENT Day 1 - Membuat Website CRUD
+# Challenge-ENT
+Challenge ENT - Membuat Website CRUD
